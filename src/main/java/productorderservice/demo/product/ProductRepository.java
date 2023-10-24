@@ -1,8 +1,11 @@
 package productorderservice.demo.product;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 class ProductRepository {
     private Long sequence = 0L;
     private Map<Long, Product> persistence = new HashMap<>();
