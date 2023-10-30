@@ -19,4 +19,18 @@ public class ProductApiTest extends ProductSteps {
         final var response = 상품등록요청(request);
         assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
     }
+
+    @Test
+    void 상품조회() {
+        ProductSteps.상품등록요청(ProductSteps.상품등록요청_생성());
+        Long productId = 1L;
+
+        ExtractableResponse<Response> response = RestAssured.given().log().all()
+                .when()
+                .get("/products/{productId}", productId)
+                .then().log().all()
+                .extract();
+
+        assertThat(response.statusCode()).isEqualTo(HttpStatus.OK.value());
+    }
 }
