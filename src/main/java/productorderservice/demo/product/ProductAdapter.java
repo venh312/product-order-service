@@ -1,6 +1,7 @@
 package productorderservice.demo.product;
 
 import org.springframework.stereotype.Component;
+import productorderservice.demo.product.domain.Product;
 
 @Component
 class ProductAdapter implements ProductPort {

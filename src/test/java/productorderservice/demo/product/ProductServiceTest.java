@@ -4,6 +4,9 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
+import productorderservice.demo.product.service.GetProductResponse;
+import productorderservice.demo.product.service.ProductService;
 
 @SpringBootTest
 public class ProductServiceTest {
@@ -16,7 +19,7 @@ public class ProductServiceTest {
         productService.addProduct(ProductSteps.상품등록요청_생성());
         long productId = 1L;
 
-        GetProductResponse response = productService.getProduct(productId);
+        ResponseEntity<GetProductResponse> response = productService.getProduct(productId);
         Assertions.assertThat(response).isNotNull();
     }
 }
