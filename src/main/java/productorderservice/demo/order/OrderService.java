@@ -1,9 +1,14 @@
 package productorderservice.demo.order;
 
+import org.apache.coyote.Response;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.*;
 import productorderservice.demo.product.domain.Product;
 
-@Component
+@RestController
+@RequestMapping("/orders")
 class OrderService {
     private final OrderPort orderPort;
 
@@ -11,9 +16,11 @@ class OrderService {
         this.orderPort = orderPort;
     }
 
-    public void createOrder(CreateOrderRequest request) {
+    @PostMapping
+    public ResponseEntity<Void> createOrder(@RequestBody CreateOrderRequest request) {
         Product product = orderPort.getProductById(request.productId());
         Order order = new Order(product, request.quantity());
         orderPort.save(order);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
