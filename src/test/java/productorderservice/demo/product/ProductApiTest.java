@@ -1,17 +1,10 @@
 package productorderservice.demo.product;
 
 import static org.assertj.core.api.Assertions.*; // AssertJ 정적 임포트
-
-import io.restassured.RestAssured;
-import io.restassured.response.ExtractableResponse;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-
-import javax.print.attribute.standard.Media;
 
 @SpringBootTest
 public class ProductApiTest extends ProductSteps {
