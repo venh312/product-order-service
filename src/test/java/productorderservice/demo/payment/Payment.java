@@ -13,7 +13,6 @@ class Payment {
         Assert.hasText(cardNumber, "카드 번호는 필수입니다.");
         this.order = order;
         this.cardNumber = cardNumber;
-
     }
 
     public void assign(Long id) {

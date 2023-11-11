@@ -7,7 +7,7 @@ public class PaymentServiceTest {
 
     private final PaymentSteps paymentSteps = new PaymentSteps();
     private PaymentService paymentService;
-    private PaymentPort paymentPort ;
+    private PaymentPort paymentPort;
 
     @BeforeEach
     void setUp() {

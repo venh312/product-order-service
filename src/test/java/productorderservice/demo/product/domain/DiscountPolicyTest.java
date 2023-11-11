@@ -3,10 +3,7 @@ package productorderservice.demo.product.domain;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class DiscountPolicyTest {
-
     @Test
     void noneDiscountPolicy() {
         int price = 1000;
