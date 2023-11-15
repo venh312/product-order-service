@@ -3,7 +3,7 @@ package productorderservice.demo.product.service;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import productorderservice.demo.product.ProductPort;
+import productorderservice.demo.product.port.ProductPort;
 import productorderservice.demo.product.domain.Product;
 import javax.transaction.Transactional;
 

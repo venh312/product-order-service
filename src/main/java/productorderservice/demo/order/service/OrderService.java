@@ -1,8 +1,10 @@
-package productorderservice.demo.order;
+package productorderservice.demo.order.service;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import productorderservice.demo.order.domain.Order;
+import productorderservice.demo.order.port.OrderPort;
 import productorderservice.demo.product.domain.Product;
 
 @RestController

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import productorderservice.demo.ApiTest;
+import productorderservice.demo.order.service.OrderService;
 import productorderservice.demo.product.ProductSteps;
 import productorderservice.demo.product.service.ProductService;
 import static org.assertj.core.api.Assertions.assertThat;

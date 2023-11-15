@@ -1,4 +1,4 @@
-package productorderservice.demo.product;
+package productorderservice.demo.product.port;
 
 import productorderservice.demo.product.domain.Product;
 

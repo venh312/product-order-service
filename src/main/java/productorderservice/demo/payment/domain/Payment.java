@@ -1,10 +1,10 @@
-package productorderservice.demo.payment;
+package productorderservice.demo.payment.domain;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.util.Assert;
-import productorderservice.demo.order.Order;
+import productorderservice.demo.order.domain.Order;
 
 import javax.persistence.*;
 
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "payments")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-class Payment {
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

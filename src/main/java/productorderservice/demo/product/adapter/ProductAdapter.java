@@ -1,6 +1,7 @@
-package productorderservice.demo.product;
+package productorderservice.demo.product.adapter;
 
 import org.springframework.stereotype.Component;
+import productorderservice.demo.product.port.ProductPort;
 import productorderservice.demo.product.domain.Product;
 
 @Component

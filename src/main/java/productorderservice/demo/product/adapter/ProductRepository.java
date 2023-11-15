@@ -1,4 +1,4 @@
-package productorderservice.demo.product;
+package productorderservice.demo.product.adapter;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import productorderservice.demo.product.domain.Product;

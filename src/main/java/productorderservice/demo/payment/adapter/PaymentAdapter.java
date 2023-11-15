@@ -1,18 +1,18 @@
-package productorderservice.demo.payment;
+package productorderservice.demo.payment.adapter;
 
 import org.springframework.stereotype.Component;
-import productorderservice.demo.order.Order;
-import productorderservice.demo.order.OrderRepository;
-import productorderservice.demo.product.domain.DiscountPolicy;
-import productorderservice.demo.product.domain.Product;
+import productorderservice.demo.order.domain.Order;
+import productorderservice.demo.order.adapter.OrderRepository;
+import productorderservice.demo.payment.domain.Payment;
+import productorderservice.demo.payment.port.PaymentPort;
 
 @Component
-class PaymentAdapter implements PaymentPort {
-    private final PaymentGateway PaymentGateway;
+public class PaymentAdapter implements PaymentPort {
+    private final productorderservice.demo.payment.adapter.PaymentGateway PaymentGateway;
     private final PaymentRepository paymentRepository;
     private final OrderRepository orderRepository;
 
-    PaymentAdapter(productorderservice.demo.payment.PaymentGateway paymentGateway, PaymentRepository paymentRepository, OrderRepository orderRepository) {
+    PaymentAdapter(productorderservice.demo.payment.adapter.PaymentGateway paymentGateway, PaymentRepository paymentRepository, OrderRepository orderRepository) {
         this.PaymentGateway = paymentGateway;
         this.paymentRepository = paymentRepository;
         this.orderRepository = orderRepository;
